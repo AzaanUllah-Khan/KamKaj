@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home Maintenance Service | Home Repair Service - KamKaj.pk</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+            width: 85%;
+            margin: 0 auto;
+            background-color: transparent;
+        }
+
+        .logo img {
+            width: 150px;
+            height: 45px;
+        }
+
+        .btn button {
+            padding: 15px;
+            background-color: #f86202;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            outline: none;
+        }
+
+        .btn p {
+            color: #333;
+            font-weight: 700;
+            margin-right: 15px;
+        }
+
+        .btn p:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            margin-top: -70px;
+            padding: 90px 0;
+            background: url("https://www.kamkaj.pk/Content/images/kamkajV2/slider-bg-gray.png");
+        }
+
+        .main {
+            width: 85%;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+        }
+
+        .main .txt {
+            width: 50%;
+        }
+
+        .txt h1 {
+            font-size: 45px;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        .txt h1 span {
+            color: #f86202;
+        }
+
+        .txt p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .txt .bold {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .txt .select {
+            margin: 20px 0;
+            width: 70%;
+            background-color: white;
+            border-radius: 5px;
+            padding: 7px 0;
+            display: flex;
+            justify-content: space-evenly;
+            box-shadow: 1px 1px 15px grey;
+        }
+
+        .txt .select select {
+            width: 25%;
+            outline: none;
+            border: none;
+        }
+
+        .txt .select input {
+            width: 55%;
+            outline: none;
+            border: none;
+            padding-left: 10px;
+        }
+
+        .form {
+            width: 50%;
+        }
+
+        .form .form1 {
+            width: 70%;
+            background-color: black;
+            margin: 0 auto;
+            padding: 40px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 30px;
+            margin-left: 150px;
+        }
+
+        .form1 input {
+            width: 100%;
+            padding: 6px 5px;
+            border-radius: 7px;
+            margin-bottom: 10px;
+        }
+
+        .form1 button {
+            width: 100%;
+            border-radius: 7px;
+            background-color: #f86202;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .form h2 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+
+        .top-s {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .top-s h1 {
+            font-size: 25px;
+            color: #333;
+        }
+
+        .top-s p {
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .opt {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .opt .options img {
+            width: 40px;
+        }
+
+        .opt .options {
+            width: 120px;
+            height: 130px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #939393;
+            margin-right: 5px;
+            border-radius: 10px;
+            transition: all 1s ease;
+        }
+
+        .opt .options:hover {
+            background-color: rgba(128, 128, 128, 0.1);
+            cursor: pointer;
+        }
+
+        .rec-s {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .rec-s h1 {
+            font-size: 25px;
+            color: #333;
+        }
+
+        .rec-s p {
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .rec {
+            padding: 10px 0;
+            width: 85%;
+            margin: 10px auto;
+        }
+
+        .rec-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .r-opt {
+            width: 23%;
+            height: 300px;
+            border: 1px solid #333;
+            padding: 10px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .r-opt h1 {
+            color: white;
+            margin: auto 0;
+        }
+
+        .r-opt p {
+            display: none;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .r-opt:hover p {
+            display: block;
+        }
+
+        .r-opt:nth-child(2),
+        .r-opt:nth-child(4) {
+            margin-top: 35px;
+        }
+
+        .r-opt button {
+            width: 90%;
+            margin: 5px auto;
+            background-color: black;
+            font-size: 15px;
+            font-weight: 600;
+            text-align: center;
+            padding: 15px 10px;
+            border-radius: 30px;
+            color: white;
+        }
+
+        .r-opt button:hover {
+            background-color: #f86202;
+        }
+
+        .c-exp {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .c-exp h1 {
+            font-size: 25px;
+            color: #333;
+        }
+
+        .c-exp p {
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .videos {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .vid {
+            width: 25%;
+        }
+
+        .vid img {
+            border-radius: 15px;
+            width: 100%;
+        }
+
+        .vid h1 {
+            margin: 10px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .vid p {
+            font-size: 13px;
+            text-align: left;
+        }
+
+        .why {
+            margin-top: 20px;
+        }
+
+        .choose {
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .choose h1 {
+            margin-top: 70px;
+            margin-bottom: 10px;
+            font-size: 25px;
+            color: #333;
+        }
+
+        .choose p {
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .things {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .things img {
+            width: 30px;
+        }
+
+        .things h2 {
+            font-size: 14px;
+            color: #333;
+            margin-left: 20px;
+        }
+
+        .imgg {
+            width: 50%;
+            padding: 10px;
+        }
+
+        .imgg img {
+            width: 100%;
+            height: auto;
+        }
+
+        .text {
+            width: 50%;
+            margin-left: 20px;
+        }
+
+        .qrcode {
+            margin-top: 20px;
+        }
+
+        .qr {
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qr .img2 {
+            width: 200px;
+            height: 200px;
+        }
+
+        .qr .img1 {
+            width: 250px;
+            height: auto;
+        }
+
+        .middle {
+            padding: 10px 60px;
+            line-height: 1.6;
+        }
+
+        .btnn {
+            margin-top: 10px;
+        }
+
+        .trust {
+            margin-top: 20px;
+        }
+
+        .trusted {
+            width: 85%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .t-img {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .f {
+            background-color: #e1e1e1;
+            width: 23%;
+        }
+
+        .f img {
+            width: 150px;
+        }
+
+        footer {
+            background: url("https://www.kamkaj.pk/content/images/kamkajV2/footer-bg.png");
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border-top: 1px solid #333;
+            margin-top: 20px;
+        }
+
+        .footer-column {
+            width: 25%;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-column li {
+            margin-bottom: 5px;
+        }
+
+        .footer-column a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .footer-column a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .footer-bottom img {
+            height: 50px;
+            width: 150px;
+        }
+
+        .social-media-icons a {
+            color: #ffffff;
+            margin-right: 10px
+        }
+
+        .social-media-icons a:hover {
+            color: #f86202;
+        }
+
+        .social-media-icons {
+            margin-left: 800px;
+        }
+
+        .footer-column h2 {
+            color: #ffffff;
+        }
+
+        .r-opt-1 {
+            background-image: url("	https://xtshubble.blob.core.windows.net/image/6324e4e7bff2435080b492e4ff312176.jpg");
+        }
+
+        .r-opt-2 {
+            background-image: url("https://xtshubble.blob.core.windows.net/image/70f9617602be44feab837d4187acedf9.jpg");
+        }
+
+        .r-opt-3 {
+            background-image: url("https://xtshubble.blob.core.windows.net/image/b43b956f2c134597a7e6d3b81bbaa2ad.jpg");
+        }
+
+        .r-opt-4 {
+            background-image: url("	https://xtshubble.blob.core.windows.net/image/881acb4e91ea4d2f858999e2cb84b8b5.jpg");
+        }
+
+        .r-opt-5 {
+            background-image: url("	https://xtshubble.blob.core.windows.net/image/0055fe1f9c0f4bf4ad9d5cfcc8f97911.jpg");
+        }
+
+        .r-opt-6 {
+            background-image: url("	https://xtshubble.blob.core.windows.net/image/d6a654160ea543208ed7073a4a7928cc.jpg");
+        }
+
+        .r-opt-7 {
+            background-image: url("	https://xtshubble.blob.core.windows.net/image/a56765af1a2c49afb1cec0aebe58ddc5.jpg");
+        }
+
+        .r-opt-8 {
+
+            background-image: url("	https://xtshubble.blob.core.windows.net/image/a56765af1a2c49afb1cec0aebe58ddc5.jpg");
+        }
+
+        .r-opt-9 {
+
+            background-image: url("https://xtshubble.blob.core.windows.net/image/74064106f3914bd68bcd4545168da69a.jpg");
+        }
+
+        .r-opt-10 {
+
+            background-image: url("https://xtshubble.blob.core.windows.net/image/e5104591341a4d719a9b1deaf75cbfa7.jpg");
+        }
+
+        .r-opt-11 {
+            background-image: url("https://xtshubble.blob.core.windows.net/image/e26c1f54eafe44c48551a1a5590d74cf.jpg");
+
+        }
+
+        .r-opt-12 {
+            background-image: url("	https://xtshubble.blob.core.windows.net/image/b7106f3ecf7e4fc3a575791137b72e58.jpg");
+        }
+
+        .gtt {
+            border: none;
+            position: fixed;
+            bottom: 2%;
+            right: 2%;
+            border-radius: 50%;
+            background-color: rgb(0, 170, 0);
+            font-weight: bolder;
+            padding: 10px;
+            border: 2px solid white;
+            box-shadow: 1px 1px 10px grey;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header portion -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.kamkaj.pk/Content/images/kamkajV2/logo.png" alt="logo" />
+            </div>
+            <div class="btn">
+                <p title="Why KamKaj">Why KamKaj</p>
+                <p title="Work with us">Work with us</p>
+                <button title="+92 300 22644 82">
+                    <i class="fa-solid fa-phone"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- hero section -->
+    <section class="hero">
+        <div class="main">
+            <div class="txt">
+                <h1><span>Skilled Professional</span> At Your Doorstep.</h1>
+                <p class="bold">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                    provident accusantium incidunt minus unde nam dolore dignissimos
+                    sint
+                </p>
+                <p class="light">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+                    magnam, aut minus maiores repudiandae saepe, cupiditate dignissimos
+                    ab quia rem nesciunt voluptatum eligendi quasi deserunt architecto
+                    dolorem maxime omnis voluptate.
+                </p>
+                <div class="select">
+                    <select>
+                        <option value="karachi">Karachi</option>
+                        <option value="lahore">Lahore</option>
+                    </select>
+                    <input type="text" placeholder="Choose a type of service" />
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+            <div class="form">
+                <div class="form1">
+                    <h2>Book Your Service</h2>
+                    <input type="text" placeholder="Name" />
+                    <input type="text" placeholder="03XXXXXXX" />
+                    <input type="text" placeholder="Select Service" />
+                    <input type="text" placeholder="Select City" />
+                    <input type="text" placeholder="Address" />
+                    <button>Request a call</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- top services section -->
+    <section class="top-s">
+        <h1>Our Top Services</h1>
+        <p>
+            Kam Kaj provides ultimate installations, repairs, maintenance, and
+            grooming services at your doorstep.
+        </p>
+        <div class="opt">
+            <div class="options">
+                <img src="	https://xtshubble.blob.core.windows.net/image/55c9e57ab87e4926bd0be4a27e4001b6.png"
+                    alt="img" />
+                <p>Home Appliances Repair</p>
+            </div>
+            <div class="options">
+                <img src="	https://xtshubble.blob.core.windows.net/image/326c1719a1c24d41b6a6c924a23b3fd9.png"
+                    alt="img" />
+                <p>Salon at Home</p>
+            </div>
+            <div class="options">
+                <img src="	https://xtshubble.blob.core.windows.net/image/375cfb9cd9494d26942295416bfa2eec.png"
+                    alt="img" />
+                <p>Cleaning Services</p>
+            </div>
+            <div class="options">
+                <img src="	https://xtshubble.blob.core.windows.net/image/8216d4a5dc1849e0a9481a3296ac8c0b.png"
+                    alt="img" />
+                <p>Electric Services</p>
+            </div>
+            <div class="options">
+                <img src="https://xtshubble.blob.core.windows.net/image/394db4b7c2d743d2b21fad2bd81b00ed.png"
+                    alt="img" />
+                <p>CCTV Services</p>
+            </div>
+            <div class="options">
+                <img src="https://xtshubble.blob.core.windows.net/image/c1c34c60aec2495e898cdd24585ccf89.png"
+                    alt="img" />
+                <p>Generator Services</p>
+            </div>
+            <div class="options">
+                <img src="https://xtshubble.blob.core.windows.net/image/b2d7a5dda363450b850acf0fdfc472df.png"
+                    alt="img" />
+                <p>Plumbing Services</p>
+            </div>
+            <div class="options">
+                <img src="https://xtshubble.blob.core.windows.net/image/577817227d6c478e85ee7183669f1485.png"
+                    alt="img" />
+                <p>Pest Control Services</p>
+            </div>
+            <div class="options">
+                <img src="https://xtshubble.blob.core.windows.net/image/4d8de69df07d489782f51f5e45826bd3.png"
+                    alt="img" />
+                <p>Carpenter Services</p>
+            </div>
+        </div>
+    </section>
+    <!-- Recommended Services -->
+    <section class="rec-s">
+        <h1>Recommended Services</h1>
+        <p>Services highly recommended by our valuable customers..</p>
+        <div class="rec">
+            <div class="rec-row">
+                <div class="r-opt r-opt-1">
+                    <h1>AC Install and Repair Services</h1>
+                    <p class="hide">
+                        Kam Kaj provides the best and dependable solution for all AC
+                        repair problems. Our services include A...
+                    </p>
+                    <button>Book Now</button>
+                </div>
+                <div class="r-opt r-opt-2">
+                    <h1>Sofa Cleaning</h1>
+                    <p class="hide">
+                        Kam Kaj provides the best and dependable solution for all AC
+                        repair problems. Our services include A...
+                    </p>
+                    <button>Book Now</button>
+                </div>
+                <div class="r-opt r-opt-3">
+                    <h1>Carpet Cleaning</h1>
+                    <p class="hide">
+                        Kam Kaj provides the best and dependable solution for all AC
+                        repair problems. Our services include A...
+                    </p>
+                    <button>Book Now</button>
+                </div>
+                <div class="r-opt r-opt-4">
+                    <h1>Deep Cleaning Service</h1>
+                    <p class="hide">
+                        Kam Kaj provides the best and dependable solution for all AC
+                        repair problems. Our services include A...
+                    </p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+            <div class="rec-row">
+                <div class="r-opt r-opt-5">
+                    <h1>Generator INstallation or Repair</h1>
+                    <p class="hide">
+                        Kam Kaj provides the best and dependable solution for all AC
+                        repair problems. Our services include A...
+                    </p>
+                    <button>Book Now</button>
+                </div>
+                <div class="r-opt r-opt-6">
+                    <h1>Refregerator and deep freezer cleaning</h1>
+                    <p class="hide">
+                        Kam Kaj provides the best and dependable solution for all AC
+                        repair problems. Our services include A...
+                    </p>
+                    <button>Book Now</button>
+                </div>
+                <div class="r-opt r-opt-7">
+                    <h1>Microwave Repair</h1>
+                    <p class="hide">
+                        Kam Kaj provides the best and dependable solution for all AC
+                        repair problems. Our services include A...
+                    </p>
+                    <button>Book Now</button>
+                </div>
+                <div class="r-opt r-opt-8">
+                    <h1>Waxing</h1>
+                    <p class="hide">
+                        Kam Kaj provides the best and dependable solution for all AC
+                        repair problems. Our services include A...
+                    </p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+            <div class="rec-row">
+                <div class="r-opt r-opt-9">
+                    <h1>Make Up</h1>
+                    <p class="hide">
+                        Kam Kaj provides the best and dependable solution for all AC
+                        repair problems. Our services include A...
+                    </p>
+                    <button>Book Now</button>
+                </div>
+                <div class="r-opt r-opt-10">
+                    <h1>AC Install and Repair Services</h1>
+                    <p class="hide">
+                        Kam Kaj provides the best and dependable solution for all AC
+                        repair problems. Our services include A...
+                    </p>
+                    <button>Book Now</button>
+                </div>
+                <div class="r-opt r-opt-11">
+                    <h1>Massage</h1>
+                    <p class="hide">
+                        Kam Kaj provides the best and dependable solution for all AC
+                        repair problems. Our services include A...
+                    </p>
+                    <button>Book Now</button>
+                </div>
+                <div class="r-opt r-opt-12">
+                    <h1>Facial</h1>
+                    <p class="hide">
+                        Kam Kaj provides the best and dependable solution for all AC
+                        repair problems. Our services include A...
+                    </p>
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Costumer Experience -->
+    <section class="c-exp">
+        <h1>Customer Experience</h1>
+        <p>
+            Valuable customers sharing their reviews after availing our services.
+        </p>
+        <div class="videos">
+            <div class="vid">
+                <img src="https://img.youtube.com/vi/ZZLvelVhXUs/0.jpg" />
+                <h1>Ms. Nadia Khan Sharing her reviews...</h1>
+                <p>
+                    Kam Kaj's team effort to provide the best of the best services to
+                    Ms. Nadia Khan is visible in her...
+                </p>
+            </div>
+            <div class="vid">
+                <img src="https://img.youtube.com/vi/ApPpLUwOGdw/0.jpg" />
+                <h1>Hapy costumer | Indonesia</h1>
+                <p>
+                    Kam Kaj's team effort to provide the best of the best services to
+                    Ms. Nadia Khan is visible in her...
+                </p>
+            </div>
+            <div class="vid">
+                <img src="https://img.youtube.com/vi/PfWKZm0Clwc/0.jpg" />
+                <h1>Happy constumer of KamKaj</h1>
+                <p>
+                    Kam Kaj's team effort to provide the best of the best services to
+                    Ms. Nadia Khan is visible in her...
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- why to choose -->
+    <section class="why">
+        <div class="choose">
+            <div class="imgg">
+                <img src="https://www.kamkaj.pk/Content/images/kamkajV2/home-tools.png">
+            </div>
+            <div class="text">
+                <h1>Why Choose Kam Kaj?</h1>
+                <p>Kam Kaj is a value addition which covers all 360 services under one platform. Our motive is to
+                    provide best services to our corporate, commercial, and residential customers. Our main key
+                    components to success are :</p>
+                <div class="things">
+                    <img src="https://www.kamkaj.pk/Content/images/kamkajV2/home-make-unique-1.png">
+                    <h2>Vetted and background-checked in house staff</h2>
+                </div>
+                <div class="things">
+                    <img src="https://www.kamkaj.pk/Content/images/kamkajV2/home-make-unique-2.png">
+                    <h2>High-Tech and Most Advanced Equipment</h2>
+                </div>
+                <div class="things">
+                    <img src="https://www.kamkaj.pk/Content/images/kamkajV2/home-make-unique-3.png">
+                    <h2>Quality Control and Safety</h2>
+                </div>
+                <div class="things">
+                    <img src="https://www.kamkaj.pk/Content/images/kamkajV2/home-make-unique-4.png">
+                    <h2>
+                        Affordable and Upfront Pricing</h2>
+                </div>
+                <div class="things">
+                    <img src="https://www.kamkaj.pk/Content/images/kamkajV2/home-make-unique-5.png">
+                    <h2>
+                        Timely and Convenient Services</h2>
+                </div>
+                <div class="things">
+                    <img src="https://www.kamkaj.pk/Content/images/kamkajV2/home-make-unique-6.png">
+                    <h2>Post Service Guarantee</h2>
+                </div>
+                <div class="things">
+                    <img src="https://www.kamkaj.pk/Content/images/kamkajV2/home-make-unique-7.png">
+                    <h2>
+                        Experienced, Trained and Certified</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- qr code -->
+    <section class="qrcode">
+        <div class="qr">
+            <img class="img1" src="https://www.kamkaj.pk/Content/images/kamkajV2/home-mobile.png">
+            <div class="middle">
+                <h1>Download Kam Kaj App</h1>
+                <p>Make your life easier by downloading Kam Kaj app.</p>
+                <div class="btnn">
+                    <img src="https://www.kamkaj.pk/Content/images/kamkajV2/home-play-store.png">
+                    <img src="https://www.kamkaj.pk/Content/images/kamkajV2/home-app-store.png">
+                </div>
+            </div>
+            <img class="img2" src="https://www.kamkaj.pk/Content/images/offer/deep-cleaning/barcode.png">
+        </div>
+    </section>
+    <!-- trusted by -->
+    <section class="trust">
+        <div class="trusted">
+            <h1>Trusted by Leading Organizations</h1>
+            <div class="t-img">
+                <div class="f">
+                    <img src="https://www.kamkaj.pk/Content/images/offer/service-logo.png">
+                </div>
+                <div class="f">
+                    <img src="https://www.kamkaj.pk/Content/images/offer/Sindheducationfoundation-logo.png">
+                </div>
+                <div class="f">
+                    <img src="https://www.kamkaj.pk/Content/images/offer/suparco-logo.png">
+                </div>
+                <div class="f">
+                    <img src="https://www.kamkaj.pk/Content/images/offer/toyota-logo.png">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-column">
+            <h2>Company</h2>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2>Costumers</h2>
+            <ul>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">iPhone app</a></li>
+                <li><a href="#">Andriod app</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2>About</h2>
+            <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h2>Support Us</h2>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">+92 3002264482</a></li>
+                <li><a href="#">Support@azaankhan</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <img src="https://www.kamkaj.pk/content/images/kamkajV2/logo-light.png" alt="Logo">
+            <div class="social-media-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="#"><i class="fa-brands fa-reddit"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+            </div>
+        </div>
+    </footer>
+    <button class="gtt">
+        <i class="fa-brands fa-whatsapp"></i>
+    </button>
+    <script>
+        alert("Hi! This is a clone of 'KamKaj' created By Azaan")
+    </script>
+</body>
+
+</html>
